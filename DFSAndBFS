@@ -1,0 +1,109 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+import java.util.StringTokenizer;
+
+/*
+	백준 1260 : DFS와 BFS
+  	그래프를 DFS로 탐색한 결과와 BFS로 탐색한 결과를 출력해야 한다.
+	방문할 수 있는 정점이 여러개면 정점 번호가 작은것이 우선순위이다.
+	정점 번호는 1번부터 N번까지이다.
+ */
+
+public class DFSAndBFS {
+
+	static List<Integer> dfsResultList = new ArrayList<Integer>();
+	static List<Integer> bfsResultList = new ArrayList<Integer>();
+	static int[][] vertex;
+	static boolean[] visited;
+	static int startEdge;
+	static int edgeCount;
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		readSolutionData();
+		initializeVistedArray();
+		DFS(startEdge);
+		printResultOfDFS();
+		initializeVistedArray();
+		BFS(startEdge);
+		printResultOfBFS();
+
+	}
+
+	static void readSolutionData() {
+		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in));) {
+			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+			edgeCount = Integer.parseInt(st.nextToken());
+			int vertexCount = Integer.parseInt(st.nextToken());
+			startEdge = Integer.parseInt(st.nextToken());
+			vertex = new int[edgeCount + 1][edgeCount + 1];
+			for (int i = 0; i < vertexCount; i++) {
+				st = new StringTokenizer(br.readLine(), " ");
+				int x = Integer.parseInt(st.nextToken());
+				int y = Integer.parseInt(st.nextToken());
+				vertex[x][y] = vertex[y][x] = 1;
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	static void initializeVistedArray() {
+		visited = new boolean[edgeCount + 1];
+	}
+
+	static void DFS(int startEdge) {
+		dfsResultList.add(startEdge);
+		visited[startEdge] = true;
+
+		for (int j = 1; j <= edgeCount; j++) {
+			if (vertex[startEdge][j] == 1 && visited[j] == false) {
+				visited[startEdge] = true;
+				DFS(j);
+			}
+		}
+	}
+
+	static void printResultOfDFS() throws IOException {
+
+		StringBuilder sb = new StringBuilder();
+		for (int i : dfsResultList) {
+			sb.append(Integer.toString(i) + " ");
+		}
+		System.out.println(sb.toString());
+		
+	}
+
+	static void BFS(int startEdge) {
+		Queue<Integer> bfsQ = new LinkedList<Integer>();
+		bfsQ.add(startEdge);
+		visited[startEdge] = true;
+
+		while (!bfsQ.isEmpty()) {
+			int currentEdge = bfsQ.poll();
+			bfsResultList.add(currentEdge);
+			for (int j = 1; j <= edgeCount; j++) {
+				if (vertex[currentEdge][j] == 1 && visited[j] == false) {
+					bfsQ.add(j);
+					visited[j] = true;
+				}
+			}
+		}
+
+	}
+
+	static void printResultOfBFS() throws IOException {
+		StringBuilder sb = new StringBuilder();
+		for (int i : bfsResultList) {
+			sb.append(Integer.toString(i) + " ");
+		}		
+		System.out.println(sb.toString());
+	
+	}
+
+}
