@@ -5,3 +5,4 @@
 |Hansu.java| https://www.acmicpc.net/problem/1065 |
 |TreausreIsland.java|https://www.acmicpc.net/problem/2589|
 |DFSAndBFS.java|https://www.acmicpc.net/problem/1260|
+|ConferenceRoomAssignment.java|https://www.acmicpc.net/problem/1931|
