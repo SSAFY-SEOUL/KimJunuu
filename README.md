@@ -6,3 +6,4 @@
 |TreausreIsland.java|https://www.acmicpc.net/problem/2589|
 |DFSAndBFS.java|https://www.acmicpc.net/problem/1260|
 |ConferenceRoomAssignment.java|https://www.acmicpc.net/problem/1931|
+|InputBox.java|https://www.acmicpc.net/problem/1965|
