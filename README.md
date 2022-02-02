@@ -7,3 +7,4 @@
 |DFSAndBFS.java|https://www.acmicpc.net/problem/1260|
 |ConferenceRoomAssignment.java|https://www.acmicpc.net/problem/1931|
 |InputBox.java|https://www.acmicpc.net/problem/1965|
+|CandyGame.java|https://www.acmicpc.net/problem/3085|
