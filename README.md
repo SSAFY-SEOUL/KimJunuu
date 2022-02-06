@@ -8,3 +8,5 @@
 |ConferenceRoomAssignment.java|https://www.acmicpc.net/problem/1931|
 |InputBox.java|https://www.acmicpc.net/problem/1965|
 |CandyGame.java|https://www.acmicpc.net/problem/3085|
+|CoinZero.java|https://www.acmicpc.net/problem/11047|
+|RotatingSushi.java|https://www.acmicpc.net/problem/2531|
