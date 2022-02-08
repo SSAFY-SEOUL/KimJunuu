@@ -11,3 +11,4 @@
 |CoinZero.java|https://www.acmicpc.net/problem/11047|
 |RotatingSushi.java|https://www.acmicpc.net/problem/2531|
 |Main_10830_행렬제곱.java|https://www.acmicpc.net/problem/10830|
+|Main_7562_나이트의이동.java|https://www.acmicpc.net/problem/7562|
