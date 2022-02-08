@@ -10,3 +10,4 @@
 |CandyGame.java|https://www.acmicpc.net/problem/3085|
 |CoinZero.java|https://www.acmicpc.net/problem/11047|
 |RotatingSushi.java|https://www.acmicpc.net/problem/2531|
+|Main_10830_행렬제곱.java|https://www.acmicpc.net/problem/10830|
